@@ -1,0 +1,15 @@
+apiVersion: v1
+kind: Service
+metadata:
+    name: "dimpy-49a6"
+    labels:
+        app: "dimpy-49a6"
+spec:
+    type: ClusterIP
+    ports:
+    - port: 50001
+      targetPort: 50001
+      protocol: TCP
+      name: http
+    selector:
+        app: "dimpy-49a6"
